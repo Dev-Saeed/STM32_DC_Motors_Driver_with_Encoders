@@ -21,7 +21,7 @@ A lightweight and efficient DC motor driver implementation for STM32 microcontro
 
 Below is the wiring diagram for connecting the STM32 microcontroller, IBT2 motor driver, DC motor, and power source:
 
-![Wiring Diagram](wiring_diagram.png)
+![Wiring Diagram](https://raw.githubusercontent.com/Dev-Saeed/STM32_DC_Motors_Driver_with_Encoders/main/Wiring.png)
 
 ### Wiring Details:
 1. **STM32 Board**:
@@ -84,12 +84,13 @@ This code is implemented using STM32 HAL libraries and is tailored for projects 
 4. Set up the PWM timer:
    - **Goal**: Achieve a **PWM frequency of 1 kHz**.
    - **Formula for PWM frequency**:
-     \[
-     f_{\text{PWM}} = \frac{f_{\text{timer}}}{(\text{Prescaler} + 1) \times (\text{Counter Period} + 1)}
-     \]
+      ```
+      f_PWM = f_timer / ((Prescaler + 1) × (Counter Period + 1))
+      ```
    - For an internal clock of **72 MHz**, use:
      - **Prescaler**: `72-1` → Divides the timer clock by 72, resulting in a 1 MHz timer frequency.
      - **Counter Period**: `1000-1` → Divides the 1 MHz timer frequency by 1000, resulting in a PWM frequency of 1 kHz.
+
 
 5. Modify the motor driver functions as needed:
    - Use the `Motor_Init` function to initialize each motor.
