@@ -21,7 +21,7 @@ A lightweight and efficient DC motor driver implementation for STM32 microcontro
 
 Below is the wiring diagram for connecting the STM32 microcontroller, IBT2 motor driver, DC motor, and power source:
 
-![Wiring Diagram](https://raw.githubusercontent.com/Dev-Saeed/STM32_DC_Motors_Driver_with_Encoders/main/Wiring.png)
+![Wiring Diagram](https://github.com/Dev-Saeed/STM32_DC_Motors_Driver_with_Encoders/blob/main/Wiring.png)
 
 ### Wiring Details:
 1. **STM32 Board**:
